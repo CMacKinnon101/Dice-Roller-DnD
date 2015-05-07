@@ -41,6 +41,16 @@ Random stat = new Random();
         intmod = new javax.swing.JLabel();
         wismod = new javax.swing.JLabel();
         chamod = new javax.swing.JLabel();
+        Class = new javax.swing.JComboBox();
+        jLabel9 = new javax.swing.JLabel();
+        Race = new javax.swing.JComboBox();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        mAtk = new javax.swing.JLabel();
+        rAtk = new javax.swing.JLabel();
+        classLevel = new javax.swing.JSpinner();
         jButton3 = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -56,7 +66,8 @@ Random stat = new Random();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Basic DnD Character Builder", 0, 0, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Basic DnD Character Builder", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setText("Roll'em");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -64,6 +75,7 @@ Random stat = new Random();
                 jButton1ActionPerformed(evt);
             }
         });
+        jPanel4.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(459, 365, 81, -1));
 
         jButton2.setText("Clear");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -71,133 +83,83 @@ Random stat = new Random();
                 jButton2ActionPerformed(evt);
             }
         });
+        jPanel4.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(558, 365, 83, -1));
 
         jLabel1.setText("Strength");
+        jPanel4.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 65, 53, 31));
 
         jLabel2.setText("Dexterity");
+        jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 102, -1, -1));
 
         jLabel3.setText("Constitution");
+        jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 134, -1, -1));
 
         jLabel4.setText("Intelligence");
+        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 166, -1, -1));
 
         jLabel5.setText("Wisdom");
+        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 210, -1, -1));
 
         jLabel6.setText("Charisma");
+        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 242, -1, -1));
+        jPanel4.add(strength, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 65, -1, -1));
+        jPanel4.add(dexterity, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 102, -1, -1));
+        jPanel4.add(constitution, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 134, -1, -1));
+        jPanel4.add(intelligence, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 166, -1, -1));
+        jPanel4.add(wisdom, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 210, -1, -1));
+        jPanel4.add(charisma, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 242, -1, -1));
 
         firstName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 firstNameActionPerformed(evt);
             }
         });
+        jPanel4.add(firstName, new org.netbeans.lib.awtextra.AbsoluteConstraints(326, 27, 115, -1));
 
         lastName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lastNameActionPerformed(evt);
             }
         });
+        jPanel4.add(lastName, new org.netbeans.lib.awtextra.AbsoluteConstraints(528, 27, 125, -1));
 
         jLabel7.setText("First Name");
+        jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(253, 27, 69, 20));
 
         jLabel8.setText("Last Name");
+        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(459, 27, 65, 20));
+        jPanel4.add(strmod, new org.netbeans.lib.awtextra.AbsoluteConstraints(145, 65, -1, -1));
+        jPanel4.add(dexmod, new org.netbeans.lib.awtextra.AbsoluteConstraints(145, 102, -1, -1));
+        jPanel4.add(conmod, new org.netbeans.lib.awtextra.AbsoluteConstraints(145, 134, -1, -1));
+        jPanel4.add(intmod, new org.netbeans.lib.awtextra.AbsoluteConstraints(145, 166, -1, -1));
+        jPanel4.add(wismod, new org.netbeans.lib.awtextra.AbsoluteConstraints(145, 210, -1, -1));
+        jPanel4.add(chamod, new org.netbeans.lib.awtextra.AbsoluteConstraints(145, 242, -1, -1));
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(firstName, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lastName, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(19, 19, 19))
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(strength)
-                            .addComponent(dexterity)
-                            .addComponent(constitution, javax.swing.GroupLayout.Alignment.LEADING)))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(charisma)
-                            .addComponent(wisdom)
-                            .addComponent(intelligence))))
-                .addGap(53, 53, 53)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(intmod)
-                    .addComponent(strmod)
-                    .addComponent(dexmod)
-                    .addComponent(conmod)
-                    .addComponent(wismod)
-                    .addComponent(chamod))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(firstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(strength)
-                    .addComponent(strmod))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel2)
-                        .addComponent(dexterity))
-                    .addComponent(dexmod))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(constitution)
-                    .addComponent(conmod))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(intelligence)
-                    .addComponent(intmod))
-                .addGap(30, 30, 30)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(wisdom)
-                    .addComponent(wismod))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(charisma)
-                    .addComponent(chamod))
-                .addGap(109, 109, 109)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)))
-        );
+        Class.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Wizard" }));
+        jPanel4.add(Class, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 110, -1, -1));
+
+        jLabel9.setText("Class:");
+        jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 90, -1, -1));
+
+        Race.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Dwarf", "Elf", "Gnome", "Half-Elf", "Half-Orc", "Halfling", "Human" }));
+        jPanel4.add(Race, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, -1, -1));
+
+        jLabel10.setText("Race");
+        jPanel4.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 90, -1, -1));
+
+        jLabel11.setText("Level");
+        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 90, -1, -1));
+
+        jLabel12.setText("Melee Attack Bonus:");
+        jPanel4.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 180, -1, -1));
+
+        jLabel13.setText("Ranged Attack Bonus:");
+        jPanel4.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, -1, -1));
+        jPanel4.add(mAtk, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, -1, -1));
+        jPanel4.add(rAtk, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 210, -1, -1));
+
+        classLevel.setModel(new javax.swing.SpinnerNumberModel(1, 1, 20, 1));
+        jPanel4.add(classLevel, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 110, -1, -1));
 
         jButton3.setText("Exit");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -222,7 +184,7 @@ Random stat = new Random();
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                 .addComponent(jButton3))
         );
 
@@ -250,31 +212,145 @@ Random stat = new Random();
         chamod.setText("");
         firstName.setText("");
         lastName.setText("");
+        mAtk.setText("");
+        rAtk.setText("");
+        Race.setSelectedIndex(0);
+        Class.setSelectedIndex(0);
+        classLevel.setValue(1);
            
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        int str, dex, con, inte, wis, cha, smod, dmod, cmod, imod, wmod, chmod;
+        int str, dex, con, inte, wis, cha, smod, dmod, cmod, imod, wmod, chmod, melee, ranged, level;
+        
+        
+        String characterRace = (String) Race.getSelectedItem();
+        
+        level = (int) classLevel.getValue();
+        
+        String characterClass = (String) Class.getSelectedItem();
+        
+        //Base Stats with Racial Modifiers
+        
         str = (stat.nextInt(6)+1) + (stat.nextInt(6)+1) + (stat.nextInt(6)+1);
+        
+        if (characterRace.equals("Gnome") || characterRace.equals("Halfling" ))
+        {
+            str = str - 2;
+        }
+            
         dex = (stat.nextInt(6)+1) + (stat.nextInt(6)+1) + (stat.nextInt(6)+1);
+        
+        if (characterRace.equals("Elf") || characterRace.equals("Halfling" ))
+        {
+            dex = dex + 2;
+        }
+        
         con = (stat.nextInt(6)+1) + (stat.nextInt(6)+1) + (stat.nextInt(6)+1);
+                
+        if (characterRace.equals("Dwarf") || characterRace.equals("Gnome"))
+        {
+            con = con + 2;
+        }
+        if (characterRace.equals("Elf"))
+        {
+            con = con - 2;
+            
+        }
+        
         inte = (stat.nextInt(6)+1) + (stat.nextInt(6)+1) + (stat.nextInt(6)+1);
+        
+        if (characterRace.equals("Elf"))
+        {
+            inte = inte + 2;
+        }
+            
         wis = (stat.nextInt(6)+1) + (stat.nextInt(6)+1) + (stat.nextInt(6)+1);
+        
+        if (characterRace.equals("Dwarf"))
+        {
+            wis = wis + 2;
+        }
+                
         cha = (stat.nextInt(6)+1) + (stat.nextInt(6)+1) + (stat.nextInt(6)+1);
         
-
+        if (characterRace.equals("Gnome") || characterRace.equals("Halfling" ))
+        {
+            cha = cha + 2;
+        }
+        
+        if (characterRace.equals("Dwarf"))
+        {
+            cha = cha - 2;
+        }
+        
+        //Stat Modifiers
+        
         smod = (str-10) / 2;        
-        if (str-10 < 0 && 0 != (str%2)) --smod;
+        
+        if (str-10 < 0 && 0 != (str%2)) 
+        {
+            --smod;
+        }
+        
         dmod = (dex-10) / 2;        
-        if (dex-10 < 0 && 0 != (dex%2)) --dmod;
+        
+        if (dex-10 < 0 && 0 != (dex%2)) 
+        {
+            --dmod;
+        }
+        
         cmod = (con-10) / 2;
-        if (con-10 < 0 && 0 != (con%2)) --cmod;
+        
+        if (con-10 < 0 && 0 != (con%2)) 
+        {
+            --cmod;
+        }
+        
         imod = (inte-10) / 2;
-        if (inte-10 < 0 && 0 != (inte%2)) --imod;
+        
+        if (inte-10 < 0 && 0 != (inte%2)) 
+        {
+            --imod;
+        }
+        
         wmod = (wis-10) / 2;
-        if (wis-10 < 0 && 0 != (wis%2)) --wmod;
+        
+        if (wis-10 < 0 && 0 != (wis%2)) 
+        {
+            --wmod;
+        }
+        
         chmod = (cha-10) / 2;
-        if (cha-10 < 0 && 0 != (cha%2)) --chmod;
+        
+        if (cha-10 < 0 && 0 != (cha%2)) 
+        {
+            --chmod;
+        }
+        
+        // Melee and Ranged Attack Bonus
+        
+        double mod;
+        
+        if (characterClass.equals("Barbarian") || characterClass.equals("Fighter") || characterClass.equals("Paladin") || characterClass.equals("Ranger"))
+        {
+            mod = 1;
+        }
+        else if(characterClass.equals("Bard") || characterClass.equals("Cleric") || characterClass.equals("Druid") || characterClass.equals("Monk") || characterClass.equals("Rogue"))
+        {
+            mod = 0.75;
+        }
+        
+        else
+        {
+            mod = 0.5;
+        }
+            
+            melee = (int) (smod + (level * mod));
+            
+            ranged = (int) (dmod + (level * mod));
+        
+        
         
         strength.setText(String.valueOf(str));
         dexterity.setText(String.valueOf(dex));
@@ -289,8 +365,10 @@ Random stat = new Random();
         intmod.setText(String.valueOf(imod));
         wismod.setText(String.valueOf(wmod));
         chamod.setText(String.valueOf(chmod));
+        mAtk.setText(String.valueOf(melee));
+        rAtk.setText(String.valueOf(ranged));
         
-        
+    
         
         
         
@@ -341,8 +419,11 @@ Random stat = new Random();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox Class;
+    private javax.swing.JComboBox Race;
     private javax.swing.JLabel chamod;
     private javax.swing.JLabel charisma;
+    private javax.swing.JSpinner classLevel;
     private javax.swing.JLabel conmod;
     private javax.swing.JLabel constitution;
     private javax.swing.JLabel dexmod;
@@ -354,6 +435,10 @@ Random stat = new Random();
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -361,10 +446,13 @@ Random stat = new Random();
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JTextField lastName;
+    private javax.swing.JLabel mAtk;
+    private javax.swing.JLabel rAtk;
     private javax.swing.JLabel strength;
     private javax.swing.JLabel strmod;
     private javax.swing.JLabel wisdom;
